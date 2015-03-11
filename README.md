@@ -1,3 +1,5 @@
+##Contains Dockuwiki / httpd / php_ldap / rsyslog
+
 To play around with, just the default configuration and just the container:
 
     docker run -p 80:80 wolfador/dokuwiki

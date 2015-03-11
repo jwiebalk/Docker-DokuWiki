@@ -43,11 +43,11 @@ EXPOSE 80
 #VOLUME ["/dokuwiki/data/","/dokuwiki/lib/plugins/","/dokuwiki/conf/","/dokuwiki/lib/tpl/","/var/log/"]
 
 ##ENTRYPOINT ["/usr/sbin/lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
-ENTRYPOINT ["bash","service rsyslog start"]
-ENTRYPOINT ["apachectl", "-d", ".", "-f", "/etc/httpd/conf/httpd.conf", "-e", "info", "-DFOREGROUND"]
+#ENTRYPOINT ["bash","service rsyslog start"]
+#ENTRYPOINT ["apachectl", "-d", ".", "-f", "/etc/httpd/conf/httpd.conf", "-e", "info", "-DFOREGROUND"]
 # add the start script
-#ADD start.sh start.sh
+ADD start.sh start.sh
 
 # entrypoint is the start script
-#ENTRYPOINT ["bash","start.sh"]
+ENTRYPOINT ["bash","start.sh"]
 

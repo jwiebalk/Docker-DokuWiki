@@ -38,7 +38,7 @@ set -x
 # services
 # --------------------------------------------------------------------------------------------------
 
-#service httpd start
+service rsyslog start
 
 apachectl -d . -f /etc/httpd/conf/httpd.conf -e info -DFOREGROUND
 
