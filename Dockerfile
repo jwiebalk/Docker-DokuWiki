@@ -1,8 +1,8 @@
-# VERSION 0.1
+# VERSION 0.2
 # AUTHOR:         John Wiebalk <john.wiebalk@me.com>
 # DESCRIPTION:    Image with DokuWiki & Httpd
-# TO_BUILD:       docker build -t wolfador/dokuwiki .
-# TO_RUN:         docker run -d -p 80:80 --name wiki wolfador/dokuwiki
+# TO_BUILD:       docker build -t wolfador/dokuwiki_ldap .
+# TO_RUN:         docker run -d -p 80:80 --name wiki wolfador/dokuwiki_ldap
 
 
 FROM centos:centos6
@@ -45,6 +45,7 @@ EXPOSE 80
 ##ENTRYPOINT ["/usr/sbin/lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
 #ENTRYPOINT ["bash","service rsyslog start"]
 #ENTRYPOINT ["apachectl", "-d", ".", "-f", "/etc/httpd/conf/httpd.conf", "-e", "info", "-DFOREGROUND"]
+
 # add the start script
 ADD start.sh start.sh
 
